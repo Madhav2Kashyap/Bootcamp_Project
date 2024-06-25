@@ -84,7 +84,7 @@ The following business needs must be fulfilled:
 
 # System Architecture
 
-![System Architecture](Data_Management_Dags/system architecture png/1.png)
+![System Architecture](https://github.com/Madhav2Kashyap/Employee_Data_Management_System/blob/3f3e6a7abc6707a3bc70a5bc715a79bc8a0e8400/Data_Management_Dags/system%20architecture%20png/1.png)
 This workflow involves the following steps for processing and handling data efficiently:
 
 ## Data Ingestion to S3
