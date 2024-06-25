@@ -81,3 +81,39 @@ The following business needs must be fulfilled:
 ### Task 5
 **Streaming System for Flagging Messages and Salary Deduction**
 - **Input Data:** Kafka stream with messages
+
+# System Architecture
+
+This workflow involves the following steps for processing and handling data efficiently:
+
+## Data Ingestion to S3
+- **Data Sources**: 
+  - Data arrives in the S3 bucket either as daily incremental/appending data or yearly appending data.
+
+## Data Processing Using Apache Spark on Amazon EMR
+- **Processing Steps**: 
+  - The data stored in S3 is processed using Apache Spark with steps executed on Amazon EMR.
+
+## Message Handling with Apache Kafka
+- **Kafka Setup**:
+  - Producers send messages to a Kafka topic.
+  - A Kafka topic is a category or feed name to which records are sent. Kafka runs as a cluster of one or more servers, known as brokers, which manage the storage and retrieval of records. Each broker handles a part of the topic's partitions.
+- **Role of Kafka**:
+  - Kafka acts as a broker to handle the high throughput of data. It stores and forwards these messages to consumers from Kafka topics.
+
+## Kafka Message Processing with Apache Spark on Amazon EMR
+- **Processing Messages**:
+  - The messages from Kafka topics are processed using Apache Spark with steps executed on Amazon EMR.
+
+## Data Loading into PostgreSQL
+- **Loading Transformed Data**:
+  - After processing, the transformed data is loaded into a PostgreSQL database.
+
+## Data Backup and Visualization
+- **Data Backup**:
+  - The data from PostgreSQL is exported back to S3 for backup purposes.
+- **Data Visualization**:
+  - PostgreSQL is connected to Grafana for data visualization.
+
+This system architecture ensures efficient data processing, storage, and visualization by leveraging the capabilities of **S3**, **Apache Kafka**, **Apache Spark**, **Amazon EMR**, **PostgreSQL**, and **Grafana**.
+
