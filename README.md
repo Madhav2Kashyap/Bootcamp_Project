@@ -84,6 +84,7 @@ The following business needs must be fulfilled:
 
 # System Architecture
 
+![System Architecture](Data_Management_Dags/system architecture png/1.png)
 This workflow involves the following steps for processing and handling data efficiently:
 
 ## Data Ingestion to S3
